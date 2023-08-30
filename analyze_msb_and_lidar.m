@@ -31,7 +31,6 @@ folder = fileparts(which( matlab.desktop.editor.getActiveFilename));
 addpath(genpath(folder));
 
 if DO_IMPORT_RAW_KROGMANN_MSB == 1
-  
     filename = FNAME_MSB0001;
     disp('Starting to import ' + filename');
     msb1 = importMSBfile(filename, [FIRST_LINE_TO_IMPORT_FROM_MSB_FILES, LAST_LINE_TO_IMPORT_FROM_MSB_FILES]);
@@ -361,7 +360,7 @@ tbl = readtable(filename, opts);
 %% Convert to output type
 
 timeString = tbl.time;
-lidar.time = NaT(1, length(timeString));
+lidar.time = NaT(length(timeString),1);
 for i = 1:length(lidar.time)
     lidar.time(i) = datetime(datestr(datenum8601(char(timeString(i)))));
 end
