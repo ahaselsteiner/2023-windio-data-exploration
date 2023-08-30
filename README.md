@@ -6,5 +6,6 @@ This repo contains a Matlab script for exploration of two WindIO datasets:
 Run the file analyze_msb_and_lidar.m
 
 The datasets are not public such that you need to contact Andreas (a.haselsteiner@uni-bremen.de) to ask for the datasets to successfully run this script.
+You can look at .gitignore to see which parts of this project are not in the public domain.
 
 Please note that is a data analysis script and not a polished software.
