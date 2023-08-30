@@ -1,5 +1,5 @@
 # Exploration of two WindIO datasets
-This is a Matlab script for exploration of two WindIO datasets:
+This repo contains a Matlab script for exploration of two WindIO datasets:
  * the first dataset containts acceleration data from the Krogmann wind turbine in Bremerhaven.
  * the second dataset contains acceleration data from a Senvion wind turbine in Bremen.
 

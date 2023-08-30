@@ -5,6 +5,10 @@
 % turbine in Bremen.
 %
 % This is a data analysis script and not a polished software.
+%
+% Figures are in German as WindIO is a German-funded project with German
+% as the main working language.
+
 
 
 % Complete acceleration file import takes longer than 15 minutes such that the workspace
