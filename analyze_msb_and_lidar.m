@@ -348,9 +348,11 @@ opts.Delimiter = ";";
 
 % Specify column names and types
 %
-% TODO: Fix 'horinzontal' typo in
-% https://github.com/project-windio/lidar-data and then adapt it here.
-opts.VariableNames = ["time", "airPressure", "battery", "gps_latitude", "gps_longitude", "ground_windspeed", "horinzontal_windspeed_height_1", "horinzontal_windspeed_height_10", "horinzontal_windspeed_height_11", "horinzontal_windspeed_height_2", "horinzontal_windspeed_height_3", "horinzontal_windspeed_height_4", "horinzontal_windspeed_height_5", "horinzontal_windspeed_height_6", "horinzontal_windspeed_height_7", "horinzontal_windspeed_height_8", "horinzontal_windspeed_height_9", "humidity", "individual_reference_1", "individual_reference_10", "individual_reference_11", "individual_reference_2", "individual_reference_3", "individual_reference_4", "individual_reference_5", "individual_reference_6", "individual_reference_7", "individual_reference_8", "individual_reference_9", "individual_timestamp_1", "individual_timestamp_10", "individual_timestamp_11", "individual_timestamp_2", "individual_timestamp_3", "individual_timestamp_4", "individual_timestamp_5", "individual_timestamp_6", "individual_timestamp_7", "individual_timestamp_8", "individual_timestamp_9", "met_wind_direction", "pod_humidity", "pod_lower_temperature", "pod_upper_temperature", "raining", "reference", "scan_dwell_time", "set_height_1", "set_height_10", "set_height_11", "set_height_2", "set_height_3", "set_height_4", "set_height_5", "set_height_6", "set_height_7", "set_height_8", "set_height_9", "temperature", "tilt", "timestamp_data_received", "vertical_windspeed_height_1", "vertical_windspeed_height_10", "vertical_windspeed_height_11", "vertical_windspeed_height_2", "vertical_windspeed_height_3", "vertical_windspeed_height_4", "vertical_windspeed_height_5", "vertical_windspeed_height_6", "vertical_windspeed_height_7", "vertical_windspeed_height_8", "vertical_windspeed_height_9", "wind_direction_1", "wind_direction_10", "wind_direction_11", "wind_direction_2", "wind_direction_3", "wind_direction_4", "wind_direction_5", "wind_direction_6", "wind_direction_7", "wind_direction_8", "wind_direction_9"];
+% TODO: Fix 'horinzontal' typo in https://github.com/project-windio/lidar-data.
+% Variable names are not compared to the file header, instead each column
+% is named subsequently with the specified strings. Thus, parseing the data
+% works despite the typo.
+opts.VariableNames = ["time", "airPressure", "battery", "gps_latitude", "gps_longitude", "ground_windspeed", "horizontal_windspeed_height_1", "horizontal_windspeed_height_10", "horizontal_windspeed_height_11", "horizontal_windspeed_height_2", "horizontal_windspeed_height_3", "horizontal_windspeed_height_4", "horizontal_windspeed_height_5", "horizontal_windspeed_height_6", "horizontal_windspeed_height_7", "horizontal_windspeed_height_8", "horizontal_windspeed_height_9", "humidity", "individual_reference_1", "individual_reference_10", "individual_reference_11", "individual_reference_2", "individual_reference_3", "individual_reference_4", "individual_reference_5", "individual_reference_6", "individual_reference_7", "individual_reference_8", "individual_reference_9", "individual_timestamp_1", "individual_timestamp_10", "individual_timestamp_11", "individual_timestamp_2", "individual_timestamp_3", "individual_timestamp_4", "individual_timestamp_5", "individual_timestamp_6", "individual_timestamp_7", "individual_timestamp_8", "individual_timestamp_9", "met_wind_direction", "pod_humidity", "pod_lower_temperature", "pod_upper_temperature", "raining", "reference", "scan_dwell_time", "set_height_1", "set_height_10", "set_height_11", "set_height_2", "set_height_3", "set_height_4", "set_height_5", "set_height_6", "set_height_7", "set_height_8", "set_height_9", "temperature", "tilt", "timestamp_data_received", "vertical_windspeed_height_1", "vertical_windspeed_height_10", "vertical_windspeed_height_11", "vertical_windspeed_height_2", "vertical_windspeed_height_3", "vertical_windspeed_height_4", "vertical_windspeed_height_5", "vertical_windspeed_height_6", "vertical_windspeed_height_7", "vertical_windspeed_height_8", "vertical_windspeed_height_9", "wind_direction_1", "wind_direction_10", "wind_direction_11", "wind_direction_2", "wind_direction_3", "wind_direction_4", "wind_direction_5", "wind_direction_6", "wind_direction_7", "wind_direction_8", "wind_direction_9"];
 opts.VariableTypes = ["string", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double"];
 
 % Specify file level properties
@@ -378,17 +380,17 @@ lidar.battery = tbl.battery;
 lidar.gps_latitude = tbl.gps_latitude;
 lidar.gps_longitude = tbl.gps_longitude;
 lidar.ground_windspeed = tbl.ground_windspeed;
-lidar.horizontal_windspeed_height_1 = tbl.horinzontal_windspeed_height_1;
-lidar.horizontal_windspeed_height_2 = tbl.horinzontal_windspeed_height_2;
-lidar.horizontal_windspeed_height_3 = tbl.horinzontal_windspeed_height_3;
-lidar.horizontal_windspeed_height_4 = tbl.horinzontal_windspeed_height_4;
-lidar.horizontal_windspeed_height_5 = tbl.horinzontal_windspeed_height_5;
-lidar.horizontal_windspeed_height_6 = tbl.horinzontal_windspeed_height_6;
-lidar.horizontal_windspeed_height_7 = tbl.horinzontal_windspeed_height_7;
-lidar.horizontal_windspeed_height_8 = tbl.horinzontal_windspeed_height_8;
-lidar.horizontal_windspeed_height_9 = tbl.horinzontal_windspeed_height_9;
-lidar.horizontal_windspeed_height_10 = tbl.horinzontal_windspeed_height_10;
-lidar.horizontal_windspeed_height_11 = tbl.horinzontal_windspeed_height_11;
+lidar.horizontal_windspeed_height_1 = tbl.horizontal_windspeed_height_1;
+lidar.horizontal_windspeed_height_2 = tbl.horizontal_windspeed_height_2;
+lidar.horizontal_windspeed_height_3 = tbl.horizontal_windspeed_height_3;
+lidar.horizontal_windspeed_height_4 = tbl.horizontal_windspeed_height_4;
+lidar.horizontal_windspeed_height_5 = tbl.horizontal_windspeed_height_5;
+lidar.horizontal_windspeed_height_6 = tbl.horizontal_windspeed_height_6;
+lidar.horizontal_windspeed_height_7 = tbl.horizontal_windspeed_height_7;
+lidar.horizontal_windspeed_height_8 = tbl.horizontal_windspeed_height_8;
+lidar.horizontal_windspeed_height_9 = tbl.horizontal_windspeed_height_9;
+lidar.horizontal_windspeed_height_10 = tbl.horizontal_windspeed_height_10;
+lidar.horizontal_windspeed_height_11 = tbl.horizontal_windspeed_height_11;
 lidar.humidity = tbl.humidity;
 lidar.individual_reference_1 = tbl.individual_reference_1;
 lidar.individual_reference_10 = tbl.individual_reference_10;
