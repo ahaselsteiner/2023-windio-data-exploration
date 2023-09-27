@@ -10,6 +10,6 @@ You can look at .gitignore to see which parts of this project are not in the pub
 
 In addition
  * the repo contains lidar-based wind measurements covering the same time as the Krogmann vibration data (`lidar.mat`)
- * and lidar data from August 16 and 17 in the original ZX300 data format. No vibration data are available for that time period.
+ * and lidar data from August 16 and 17 in the original ZX300 data format (`Wind_1082@Y2023_M08_D16.CSV`, `Wind_1082@Y2023_M08_D17.CSV`). No vibration data are available for that time period.
 
 Please note that is a data analysis script and not a polished software.
